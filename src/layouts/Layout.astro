@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Ramírez | Desarrollador Full Stack</title>
+  <meta name="description" content="Portfolio profesional de Carlos Ramírez - Desarrollador Full Stack con +5 años de experiencia en desarrollo de software, telecomunicaciones y ciberseguridad." />
+  <meta name="keywords" content="desarrollador, full stack, software, tecnología, portfolio, Carlos Ramírez" />
+  <meta name="author" content="Carlos Ramírez" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carlosramirez.dev/" />
+  <meta property="og:title" content="Carlos Ramírez | Desarrollador Full Stack" />
+  <meta property="og:description" content="Portfolio profesional de Carlos Ramírez - Desarrollador Full Stack con +5 años de experiencia." />
+  <meta property="og:image" content="/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://carlosramirez.dev/" />
+  <meta property="twitter:title" content="Carlos Ramírez | Desarrollador Full Stack" />
+  <meta property="twitter:description" content="Portfolio profesional de Carlos Ramírez - Desarrollador Full Stack con +5 años de experiencia." />
+  <meta property="twitter:image" content="/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <slot />
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html> 

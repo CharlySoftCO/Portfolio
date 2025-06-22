@@ -1,0 +1,419 @@
+---
+// Modern SobreMi Component
+---
+
+<section id="sobre-mi" class="sobre-mi">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">
+        <span class="badge-icon">👤</span>
+        <span class="badge-text">Sobre mí</span>
+      </div>
+      <h2 class="section-title">Conoce mi historia</h2>
+      <p class="section-subtitle">Descubre mi pasión por la tecnología y el desarrollo</p>
+    </div>
+
+    <div class="sobre-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="sobre-text">
+            <div class="text-card">
+              <div class="card-icon">💡</div>
+              <h3>Mi Pasión</h3>
+              <p class="lead">
+                Profesional apasionado por la tecnología con más de 
+                <span class="highlight">5 años</span> de experiencia en desarrollo de software, 
+                telecomunicaciones, soporte técnico y ciberseguridad.
+              </p>
+            </div>
+            
+            <div class="text-card">
+              <div class="card-icon">🎯</div>
+              <h3>Mi Especialización</h3>
+              <p>
+                Me especializo en optimizar procesos, liderar proyectos innovadores y 
+                entregar soluciones de alto impacto alineadas con los objetivos 
+                estratégicos de cada organización.
+              </p>
+            </div>
+
+            <div class="sobre-stats">
+              <div class="stat-item">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-content">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Proyectos Completados</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-content">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Años de Experiencia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="sobre-links">
+            <div class="links-grid">
+              <a href="https://github.com/CharlySoftCO" class="link-card github-card" target="_blank">
+                <div class="link-icon">
+                  <i class="bi bi-github"></i>
+                </div>
+                <div class="link-content">
+                  <h4>GitHub</h4>
+                  <p>Explora mi código</p>
+                </div>
+                <div class="link-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </a>
+
+              <a href="https://charlysoft.com.co" class="link-card website-card" target="_blank">
+                <div class="link-icon">
+                  <i class="bi bi-globe"></i>
+                </div>
+                <div class="link-content">
+                  <h4>Sitio Web</h4>
+                  <p>Visita mi portfolio</p>
+                </div>
+                <div class="link-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </a>
+
+              <a href="#contacto" class="link-card contact-card">
+                <div class="link-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="link-content">
+                  <h4>Contacto</h4>
+                  <p>Hablemos de tu proyecto</p>
+                </div>
+                <div class="link-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </a>
+
+              <a href="#proyectos" class="link-card projects-card">
+                <div class="link-icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <div class="link-content">
+                  <h4>Proyectos</h4>
+                  <p>Ver mi trabajo</p>
+                </div>
+                <div class="link-arrow">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sobre-mi {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sobre-mi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(99,102,241,0.05)" cx="200" cy="200" r="100"/><circle fill="rgba(139,92,246,0.05)" cx="800" cy="800" r="150"/></svg>');
+    pointer-events: none;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .badge-icon {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .sobre-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .sobre-text {
+    padding-right: 2rem;
+  }
+
+  .text-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .text-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+
+  .text-card p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .text-card .lead {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .highlight {
+    color: #6366f1;
+    font-weight: 700;
+  }
+
+  .sobre-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 1;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #6366f1;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+  }
+
+  .sobre-links {
+    padding-left: 2rem;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: left 0.3s ease;
+    z-index: 0;
+  }
+
+  .link-card:hover::before {
+    left: 0;
+  }
+
+  .link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    color: white;
+  }
+
+  .link-icon {
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+  }
+
+  .link-content {
+    flex: 1;
+    z-index: 1;
+    position: relative;
+  }
+
+  .link-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .link-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .link-arrow {
+    z-index: 1;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .link-card:hover .link-arrow {
+    transform: translateX(5px);
+  }
+
+  .github-card .link-icon {
+    color: #333;
+  }
+
+  .website-card .link-icon {
+    color: #6366f1;
+  }
+
+  .contact-card .link-icon {
+    color: #06b6d4;
+  }
+
+  .projects-card .link-icon {
+    color: #8b5cf6;
+  }
+
+  .link-card:hover .link-icon {
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    .sobre-text {
+      padding-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    .sobre-links {
+      padding-left: 0;
+    }
+
+    .links-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sobre-mi {
+      padding: 80px 0;
+    }
+
+    .sobre-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stat-item {
+      padding: 1rem;
+    }
+
+    .text-card {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+    }
+
+    .links-grid {
+      gap: 1rem;
+    }
+
+    .link-card {
+      padding: 1rem;
+    }
+  }
+</style> 

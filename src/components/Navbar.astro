@@ -1,0 +1,408 @@
+---
+// Modern Compact Navbar Component with Dropdown
+---
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="brand-text">Carlos</span>
+      <span class="brand-accent">Ramírez</span>
+      <span class="brand-dot">.</span>
+    </a>
+    
+    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+      <span class="toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre-mi">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Sobre mí</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#proyectos">
+            <span class="nav-icon">🚀</span>
+            <span class="nav-text">Proyectos</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#habilidades">
+            <span class="nav-icon">⚡</span>
+            <span class="nav-text">Habilidades</span>
+          </a>
+        </li>
+        
+        <!-- Dropdown para Educación y Certificaciones -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="nav-icon">📚</span>
+            <span class="nav-text">Formación</span>
+          </a>
+          <ul class="dropdown-menu modern-dropdown">
+            <li>
+              <a class="dropdown-item" href="#educacion">
+                <span class="dropdown-icon">🎓</span>
+                <span>Educación</span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#certificaciones">
+                <span class="dropdown-icon">🏆</span>
+                <span>Certificaciones</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link contact-link" href="#contacto">
+            <span class="nav-icon">💬</span>
+            <span class="nav-text">Contacto</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1rem 0;
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+  }
+
+  .navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .brand-text {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-accent {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-dot {
+    color: #f59e0b;
+    font-weight: 900;
+  }
+
+  .navbar-nav {
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #374151 !important;
+    padding: 0.75rem 1.25rem !important;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .nav-link:hover::before {
+    left: 0;
+  }
+
+  .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link:hover .nav-icon {
+    transform: scale(1.2);
+  }
+
+  .contact-link {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white !important;
+    border: 2px solid transparent;
+  }
+
+  .contact-link:hover {
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+  }
+
+  /* Dropdown Styles */
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .modern-dropdown {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    animation: dropdownFadeIn 0.3s ease;
+  }
+
+  @keyframes dropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #374151;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .dropdown-item:hover {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    transform: translateX(5px);
+  }
+
+  .dropdown-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-item:hover .dropdown-icon {
+    transform: scale(1.2);
+  }
+
+  .modern-toggler {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .modern-toggler:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  .modern-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  }
+
+  .toggler-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .modern-toggler[aria-expanded="true"] .toggler-icon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .modern-toggler[aria-expanded="true"] .toggler-icon:nth-child(2) {
+    opacity: 0;
+  }
+
+  .modern-toggler[aria-expanded="true"] .toggler-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  /* Active link styles */
+  .nav-link.active {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    .navbar-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      margin: 0.25rem 0;
+      border-radius: 8px;
+      padding: 0.75rem 1rem !important;
+    }
+
+    .nav-text {
+      font-size: 1rem;
+    }
+
+    .modern-dropdown {
+      background: transparent;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 0;
+      min-width: auto;
+    }
+
+    .dropdown-item {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin: 0.25rem 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 1.25rem;
+    }
+
+    .nav-icon {
+      font-size: 1rem;
+    }
+
+    .nav-text {
+      font-size: 0.9rem;
+    }
+
+    .dropdown-icon {
+      font-size: 1rem;
+    }
+  }
+
+  /* Desktop optimizations */
+  @media (min-width: 992px) {
+    .navbar-nav {
+      gap: 1rem;
+    }
+
+    .nav-link {
+      padding: 0.75rem 1.5rem !important;
+    }
+
+    .contact-link {
+      margin-left: 0.5rem;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Navbar scroll effects
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('mainNavbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Active link highlighting
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', function() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scrolling for all nav links
+    document.querySelectorAll('.nav-link, .dropdown-item').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  });
+</script> 
