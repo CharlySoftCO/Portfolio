@@ -1,0 +1,326 @@
+---
+// Modern Footer Component
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <div class="brand-name">
+              <span class="brand-text">Carlos</span>
+              <span class="brand-accent">Ramírez</span>
+              <span class="brand-dot">.</span>
+            </div>
+            <p class="brand-description">
+              Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales. 
+              Transformando ideas en realidad con código limpio y diseño moderno.
+            </p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/CharlySoftCO" class="social-link" target="_blank" aria-label="GitHub">
+              <span class="social-icon">🐙</span>
+            </a>
+            <a href="https://charlysoftco.colnexa.com.co" class="social-link" target="_blank" aria-label="Sitio Web">
+              <span class="social-icon">🌐</span>
+            </a>
+            <a href="mailto:cramirezruiz30@gmail.com" class="social-link" aria-label="Email">
+              <span class="social-icon">📧</span>
+            </a>
+            <a href="https://charlysoftco.colnexa.com.co" class="social-link" target="_blank" aria-label="Portfolio">
+              <span class="social-icon">💼</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Enlaces Rápidos</h3>
+          <ul class="footer-links">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Servicios</h3>
+          <ul class="footer-links">
+            <li><a href="#proyectos">Desarrollo Web</a></li>
+            <li><a href="#proyectos">Aplicaciones Móviles</a></li>
+            <li><a href="#proyectos">Consultoría IT</a></li>
+            <li><a href="#proyectos">Optimización SEO</a></li>
+            <li><a href="#proyectos">Mantenimiento</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Contacto</h3>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <span>cramirezruiz30@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🌐</span>
+              <span>charlysoftco.colnexa.com.co</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <span>Colombia</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">⏰</span>
+              <span>Lun - Vie: 9:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            © 2024 Carlos Ramírez. Todos los derechos reservados.
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" class="bottom-link">Privacidad</a>
+            <a href="#" class="bottom-link">Términos</a>
+            <a href="#" class="bottom-link">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footer-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23footer-pattern)"/></svg>');
+    pointer-events: none;
+  }
+
+  .footer-content {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-brand {
+    margin-bottom: 2rem;
+  }
+
+  .brand-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .brand-text {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-accent {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-dot {
+    color: #f59e0b;
+    font-weight: 900;
+  }
+
+  .brand-description {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+  }
+
+  .footer-links a:hover {
+    color: #f59e0b;
+    transform: translateX(5px);
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+
+  .contact-icon {
+    font-size: 1.1rem;
+    color: #f59e0b;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .copyright {
+    color: #94a3b8;
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .bottom-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .bottom-link:hover {
+    color: #f59e0b;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-bottom-links {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-content {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .brand-name {
+      font-size: 1.5rem;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+
+    .footer-bottom-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style> 

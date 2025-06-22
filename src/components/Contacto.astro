@@ -1,0 +1,422 @@
+---
+// Modern Contact Component
+---
+
+<section id="contacto" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-icon">💬</span>
+        Contacto
+      </h2>
+      <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="icon">📧</span>
+          </div>
+          <div class="info-content">
+            <h3>Email</h3>
+            <p>cramirezruiz30@gmail.com</p>
+            <a href="mailto:cramirezruiz30@gmail.com" class="contact-link">Enviar Email</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="icon">🌐</span>
+          </div>
+          <div class="info-content">
+            <h3>Sitio Web</h3>
+            <p>charlysoftco.colnexa.com.co</p>
+            <a href="https://charlysoftco.colnexa.com.co" class="contact-link" target="_blank">Visitar Sitio</a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="icon">📍</span>
+          </div>
+          <div class="info-content">
+            <h3>Ubicación</h3>
+            <p>Colombia</p>
+            <span class="contact-link">Remoto disponible</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <span class="icon">⏰</span>
+          </div>
+          <div class="info-content">
+            <h3>Disponibilidad</h3>
+            <p>Lun - Vie: 9:00 - 18:00</p>
+            <span class="contact-link">Respuesta en 24h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Nombre completo</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Asunto</label>
+            <input type="text" id="subject" name="subject" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-icon">📤</span>
+            <span class="btn-text">Enviar Mensaje</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <h3 class="social-title">Sígueme en redes sociales</h3>
+      <div class="social-grid">
+        <a href="https://github.com/CharlySoftCO" class="social-link github" target="_blank">
+          <span class="social-icon">🐙</span>
+          <span class="social-name">GitHub</span>
+        </a>
+        <a href="https://charlysoftco.colnexa.com.co" class="social-link website" target="_blank">
+          <span class="social-icon">🌐</span>
+          <span class="social-name">Sitio Web</span>
+        </a>
+        <a href="mailto:cramirezruiz30@gmail.com" class="social-link email">
+          <span class="social-icon">📧</span>
+          <span class="social-name">Email</span>
+        </a>
+        <a href="https://charlysoftco.colnexa.com.co" class="social-link portfolio" target="_blank">
+          <span class="social-icon">💼</span>
+          <span class="social-name">Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    color: white;
+  }
+
+  .contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
+    pointer-events: none;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .title-icon {
+    font-size: 1.2em;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .info-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .info-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .info-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-link {
+    color: #fbbf24;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .contact-link:hover {
+    color: #f59e0b;
+  }
+
+  .contact-form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .form-input,
+  .form-textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: #fbbf24;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #1f2937;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+  }
+
+  .btn-icon {
+    font-size: 1.1rem;
+  }
+
+  .social-links {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .social-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .social-link {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+
+  .social-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-form-container {
+      padding: 1.5rem;
+    }
+
+    .info-card {
+      padding: 1.25rem;
+    }
+
+    .social-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    .info-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .social-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Contact form handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+      
+      // Here you would typically send the data to your backend
+      console.log('Form submitted:', data);
+      
+      // Show success message (you can customize this)
+      alert('¡Mensaje enviado con éxito! Te responderé pronto.');
+      
+      // Reset form
+      contactForm.reset();
+    });
+  });
+</script> 

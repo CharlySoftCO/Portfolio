@@ -5,6 +5,12 @@ import Projects from '../components/Projects.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import SobreMi from '../components/SobreMi.astro';
+import Experiencia from '../components/Experiencia.astro';
+import Educacion from '../components/Educacion.astro';
+import Certificaciones from '../components/Certificaciones.astro';
+import Habilidades from '../components/Habilidades.astro';
+import Contacto from '../components/Contacto.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -215,6 +221,24 @@ import SobreMi from '../components/SobreMi.astro';
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Container adjustments */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 0.75rem;
+      }
+    }
   </style>
 </head>
 
@@ -234,200 +258,25 @@ import SobreMi from '../components/SobreMi.astro';
   <SobreMi />
 
   <!-- Experiencia -->
-  <section id="experiencia" class="section" style="background: #f8fafc;">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Experiencia Profesional</h2>
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="card-modern h-100 p-4 text-center">
-            <i class="bi bi-lightbulb-fill card-icon"></i>
-            <h5 class="card-title mb-3">Líder de Innovación</h5>
-            <p class="card-text">Management And Services IT SAS</p>
-            <p class="text-muted">Optimización de procesos y coordinación de proyectos tecnológicos innovadores.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="card-modern h-100 p-4 text-center">
-            <i class="bi bi-globe2 card-icon"></i>
-            <h5 class="card-title mb-3">WebMaster</h5>
-            <p class="card-text">Planeta IP Comunicaciones SAS ESP</p>
-            <p class="text-muted">Gestión de presencia digital y estrategias SEO para optimización web.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="card-modern h-100 p-4 text-center">
-            <i class="bi bi-tools card-icon"></i>
-            <h5 class="card-title mb-3">Soporte Técnico</h5>
-            <p class="card-text">Banco Falabella</p>
-            <p class="text-muted">Resolución de incidencias técnicas y capacitación de usuarios.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Experiencia />
+
+  <!-- Educación -->
+  <Educacion />
+
+  <!-- Certificaciones -->
+  <Certificaciones />
+
+  <!-- Habilidades -->
+  <Habilidades />
 
   <!-- Proyectos -->
   <Projects />
 
-  <!-- Educación -->
-  <section id="educacion" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Educación</h2>
-      <div class="row g-4">
-        <div class="col-lg-6 fade-in-up">
-          <div class="card-modern p-4">
-            <h5 class="text-primary mb-2">Ingeniería en Sistemas</h5>
-            <p class="text-muted mb-0">En curso</p>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="card-modern p-4">
-            <h5 class="text-primary mb-2">Tecnólogo en Análisis y Desarrollo de Sistemas</h5>
-            <p class="text-muted mb-0">Fundación de Educación Superior San José</p>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="card-modern p-4">
-            <h5 class="text-primary mb-2">Formación Técnica</h5>
-            <p class="text-muted mb-0">SENA</p>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="card-modern p-4">
-            <h5 class="text-primary mb-2">Bachiller Académico</h5>
-            <p class="text-muted mb-0">Instituto Educativo San Miguel</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certificaciones -->
-  <section id="certificaciones" class="section" style="background: #f8fafc;">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Certificaciones</h2>
-      <div class="row g-3">
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-shield-check text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">Ciberseguridad en la Nube de Microsoft Azure</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-laptop text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">Desarrollo de Competencias Digitales</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-code-slash text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">Desarrollo Web con PHP</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-rocket text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">Ruta 2 Misión TIC 2022</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-wifi text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">IPv6 Básico - 3ra Edición 2022</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 fade-in-up">
-          <div class="cert-badge">
-            <i class="bi bi-kanban text-primary mb-2" style="font-size: 2rem;"></i>
-            <p class="mb-0 fw-semibold">Scrum Foundation Professional Certification</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Habilidades -->
-  <section id="habilidades" class="section">
-    <div class="container">
-      <h2 class="section-title fade-in-up">Habilidades Técnicas</h2>
-      <div class="row g-4">
-        <div class="col-lg-6 fade-in-up">
-          <div class="skill-item">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="skill-name">JavaScript</span>
-              <span class="text-primary fw-semibold">85%</span>
-            </div>
-            <div class="progress-modern">
-              <div class="progress-bar-modern" style="width: 85%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="skill-item">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="skill-name">React</span>
-              <span class="text-primary fw-semibold">95%</span>
-            </div>
-            <div class="progress-modern">
-              <div class="progress-bar-modern" style="width: 95%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="skill-item">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="skill-name">Laravel</span>
-              <span class="text-primary fw-semibold">75%</span>
-            </div>
-            <div class="progress-modern">
-              <div class="progress-bar-modern" style="width: 75%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 fade-in-up">
-          <div class="skill-item">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="skill-name">TypeScript</span>
-              <span class="text-primary fw-semibold">65%</span>
-            </div>
-            <div class="progress-modern">
-              <div class="progress-bar-modern" style="width: 65%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contacto -->
-  <section id="contacto" class="section contact-section">
-    <div class="container position-relative">
-      <div class="text-center fade-in-up">
-        <h2 class="section-title text-white mb-4">¿Listo para trabajar juntos?</h2>
-        <p class="lead mb-4 text-white-50">Encuéntrame en las redes sociales o envíame un correo para comenzar tu próximo proyecto.</p>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="mailto:cramirezruiz30@gmail.com" class="btn btn-modern" style="background: rgba(255,255,255,0.2); color: white; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-            <i class="bi bi-envelope-fill me-2"></i>Enviar correo
-          </a>
-          <a href="https://github.com/CharlySoftCO" class="btn btn-modern" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3);" target="_blank">
-            <i class="bi bi-github me-2"></i>GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Contacto />
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="social-links mb-3">
-        <a href="https://github.com/CharlySoftCO" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="https://charlysoft.com.co" target="_blank"><i class="bi bi-globe"></i></a>
-      </div>
-      <p class="mb-0">&copy; 2025 CarlosRamirez.dev — Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <Footer />
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -459,51 +308,6 @@ import SobreMi from '../components/SobreMi.astro';
             });
           }
         });
-      });
-    });
-
-    // Animate progress bars on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-      var observerOptions = {
-        threshold: 0.5
-      };
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var target = entry.target;
-            target.style.width = target.getAttribute('data-width') || '0%';
-          }
-        });
-      }, observerOptions);
-
-      var progressBars = document.querySelectorAll('.progress-bar-modern');
-      progressBars.forEach(function(bar) {
-        var width = bar.style.width;
-        bar.style.width = '0%';
-        bar.setAttribute('data-width', width);
-        observer.observe(bar);
-      });
-    });
-
-    // Fade in animations on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-      var observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, observerOptions);
-
-      var fadeElements = document.querySelectorAll('.fade-in-up');
-      fadeElements.forEach(function(element) {
-        observer.observe(element);
       });
     });
   </script>
