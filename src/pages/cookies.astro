@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Cookies | Carlos Ramírez</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <Layout>
+    <section class="legal-bg">
+      <div class="legal-card">
+        <a href="/" class="btn btn-primary back-btn">← Volver al inicio</a>
+        <h1 class="section-title">Política de Cookies</h1>
+        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico del sitio.</p>
+        <h2>1. ¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Sirven para recordar sus preferencias y mejorar la navegación.</p>
+        <h2>2. Tipos de cookies utilizadas</h2>
+        <ul>
+          <li><strong>Cookies técnicas:</strong> necesarias para el funcionamiento básico del sitio.</li>
+          <li><strong>Cookies de análisis:</strong> nos ayudan a entender cómo los usuarios interactúan con el sitio.</li>
+        </ul>
+        <h2>3. Gestión de cookies</h2>
+        <p>Puede configurar su navegador para aceptar o rechazar cookies. Tenga en cuenta que deshabilitar cookies puede afectar el funcionamiento del sitio.</p>
+        <h2>4. Cambios en la política</h2>
+        <p>Nos reservamos el derecho de modificar esta política en cualquier momento. Los cambios serán publicados en esta página.</p>
+      </div>
+    </section>
+  </Layout>
+
+<style>
+.legal-bg {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  padding: 3rem 1rem;
+}
+.legal-card {
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(99,102,241,0.10), 0 1.5px 8px rgba(6,182,212,0.10);
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1);
+}
+.legal-card h1 {
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.legal-card h2 {
+  font-size: 1.2rem;
+  color: #6366f1;
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+.legal-card p, .legal-card ul {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  transition: background 0.3s, transform 0.2s;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.back-btn:hover {
+  background: linear-gradient(135deg, #06b6d4, #6366f1);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .legal-card {
+    padding: 1.2rem 0.5rem;
+    border-radius: 1.2rem;
+  }
+  .legal-card h1 {
+    font-size: 1.4rem;
+  }
+}
+</style>
+
+</body>
+</html> 
