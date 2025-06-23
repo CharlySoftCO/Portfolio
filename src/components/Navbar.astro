@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="/favicon.svg" alt="Logo CR" width="40" height="40" style="vertical-align:middle;" />
+      <img src="/logo.svg" alt="Logo CR" width="40" height="40" style="vertical-align:middle;" />
     </a>
     
     <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,26 +35,17 @@
           </a>
         </li>
         
-        <!-- Dropdown para Educación y Certificaciones -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="nav-icon">📚</span>
-            <span class="nav-text">Formación</span>
+        <li class="nav-item">
+          <a class="nav-link" href="#educacion">
+            <span class="nav-icon">🎓</span>
+            <span class="nav-text">Educación</span>
           </a>
-          <ul class="dropdown-menu modern-dropdown">
-            <li>
-              <a class="dropdown-item" href="#educacion">
-                <span class="dropdown-icon">🎓</span>
-                <span>Educación</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#certificaciones">
-                <span class="dropdown-icon">🏆</span>
-                <span>Certificaciones</span>
-              </a>
-            </li>
-          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificaciones">
+            <span class="nav-icon">🏆</span>
+            <span class="nav-text">Certificaciones</span>
+          </a>
         </li>
         
         <li class="nav-item">
@@ -394,13 +385,38 @@
           const target = document.querySelector(href);
           if (target) {
             const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-            window.scrollTo({
-              top: offsetTop,
-              behavior: 'smooth'
-            });
+            // Scroll suave personalizado a 500ms
+            smoothScrollTo(offsetTop, 500);
           }
+        }
+        // Cerrar el menú hamburguesa al hacer clic en un enlace (solo en móvil/tablet)
+        const navbarCollapse = document.getElementById('navbarNav');
+        const toggler = document.querySelector('.navbar-toggler');
+        if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+          toggler.setAttribute('aria-expanded', 'false');
         }
       });
     });
   });
+
+  // Función personalizada para scroll suave con duración
+  function smoothScrollTo(targetY, duration) {
+    const startY = window.scrollY;
+    const changeY = targetY - startY;
+    const startTime = performance.now();
+    function animateScroll(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + changeY * easeInOutQuad(progress));
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    }
+    requestAnimationFrame(animateScroll);
+  }
+  // Función de easing para suavidad
+  function easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  }
 </script> 
