@@ -28,7 +28,11 @@ Este es un portafolio profesional desarrollado con **Astro** y estilizado con Bo
 Puedes desplegar este proyecto fácilmente en plataformas como **Vercel**, **Netlify** o **GitHub Pages**.
 
 ## 📄 Licencia
-MIT
+Este proyecto está licenciado bajo la **Business Source License 1.1 (BUSL-1.1)**.
+
+- Puedes ver el código y usarlo para fines personales y educativos.
+- No está permitido el uso comercial, la redistribución ni la modificación sin un acuerdo previo y por escrito con el autor.
+- Consulta el archivo LICENSE para más detalles.
 
 ---
 Hecho con ❤️ por Carlos Ramírez
